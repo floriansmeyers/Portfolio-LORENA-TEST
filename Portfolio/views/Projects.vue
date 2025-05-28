@@ -1,10 +1,9 @@
 <template>
   <div class="home-page">
-    <Header
-      title="PORTFOLIO"
+    <Contentheader 
+      title="MIJN PROJECTEN"
       subtitle="FRONT - END DEVELOPER"
-      description="Webdeveloper in wording, gebeten door front-end en design."
-      description2="Bekijk mijn projecten"
+      description="Tijdens WPL 1 en 2 heb ik praktische ervaring opgedaan met webontwikkeling. Ik werkte aan echte projecten waarbij ik mijn kennis van HTML, CSS, JavaScript en Vue toepaste. Deze projecten hielpen me mijn vaardigheden te verbeteren en het belang van teamwork en planning te leren."
       mainImage="../src/assets/dashboard.png"
       gridImage1="../src/assets/pawpaths.png"
       gridImage2="../src/assets/ziapina2.png"
@@ -24,8 +23,8 @@
 <script>
 import Footer from '../components/Footer.vue';
 import Navigatie from '../components/Navigatie.vue';
-import Header from '../components/Header.vue';
 import Section from '../components/Section.vue';
+import Content from '../componets/Content.vue';
 
 import dashboard from '../src/assets/dashboard.png';
 import pawpaths from '../src/assets/pawpaths.png';
@@ -36,12 +35,12 @@ import foto4 from '../src/assets/riaenik.jpg';
 import foto3  from '../src/assets/landini10.jpg';
 
 export default {
-  name: "Home",
+  name: "Projects",
   components: {
     Navigatie,
     Footer,
-    Header,
     Section,
+    Content
   },
   data() {
     return {

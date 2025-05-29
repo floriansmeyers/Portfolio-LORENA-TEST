@@ -20,6 +20,7 @@ import Section from '../components/Section.vue';
 import Content from '../components/Content.vue';
 import Card from '../components/Card.vue';
 import BackButton from '../components/BackButton.vue';
+import ContactCard from '../components/ContactCard.vue';
 
 
 
@@ -32,7 +33,8 @@ export default {
     Section,
     Content,
     Card,
-    BackButton
+    BackButton,
+    ContactCard
   },
   data () {
     return{

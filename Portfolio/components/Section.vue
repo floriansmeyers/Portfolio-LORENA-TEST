@@ -4,10 +4,17 @@
       <h2 class="header">{{ title }}</h2>
       <h3 v-if="subtitle" class="subtitle">{{ subtitle }}</h3>
       <p v-if="text" class="text">{{ text }}</p>
+      <ul class="list">
+        
+        <li v-if="listitem" class="list-item">{{ listitem }}</li>
+        <li v-if="listitem2" class="list-item">{{ listitem2 }}</li>
+        <li v-if="listitem3" class="list-item">{{ listitem3 }}</li>
+        <li v-if="listitem3" class="list-item">{{ listitem4 }}</li>
+      </ul>
 
-      <div class="projects-button">
-        <router-link :to="linkTarget" class="view-work-button">
-          
+      <div class="button">
+        <router-link :to="linkTarget" v-if="showLink && linkTarget" class="projects-button">
+          <p class="function-description">{{ description }}</p>
           <svg
             viewBox="0 0 24 24"
             width="24"
@@ -52,7 +59,22 @@ export default {
       type: String,
       default: '',
     },
-    
+    description: {
+      type: String,
+    },
+   
+    listitem: {
+      type:Array,
+    },
+     listitem2: {
+      type:Array,
+    },
+     listitem3: {
+      type:Array,
+    },
+     listitem4: {
+      type:Array,
+    },
     photos: {
       type: Array,
       default: () => [],
@@ -62,6 +84,10 @@ export default {
       type: String,
       required: true,
     },
+    showLink: {
+    type: Boolean,
+    default: true, // standaard tonen
+  },
   },
 };
 </script>
@@ -83,7 +109,13 @@ export default {
 .text-content {
   flex: 1;
 }
+.function-description {
+  font-size: 0.9rem;
+  color: #5e5e5e;
+  margin-top: 12px;
+  line-height: 1.6;
 
+}
 /* Foto-grid rechts */
 .photo-grid {
   width: 600px; /* vaste breedte voor fotos */
@@ -127,22 +159,12 @@ export default {
   margin-bottom: 20px;
 }
 
-.list {
-  list-style-type: disc;
-  margin-left: 20px;
-  max-width: 600px;
-  color: #555;
-}
 
-.list li {
-  margin-bottom: 10px;
-}
-
-.projects-button {
+.button {
   margin-top: 10px;
 }
 
-.view-work-button {
+.projects-button {
   border: 1px solid #2b2d42;
   padding: 10px 18px;
   border-radius: 8px;
@@ -154,9 +176,10 @@ export default {
   color: #2b2d42;
   transition: all 0.3s ease;
   background-color: transparent;
+  margin-top: 10px;
 }
 
-.view-work-button:hover {
+.projects-button:hover {
   background-color: #e2faf6;
   border-color: #1d1d1d;
 }

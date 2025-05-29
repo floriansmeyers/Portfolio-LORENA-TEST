@@ -45,9 +45,10 @@
       :photos="[
         { src: '../src/assets/kubus.png', alt: 'Project afbeelding 1' },
         { src: '../src/assets/schilderij.jpg', alt: 'Project afbeelding 2' },
-        { src: '../src/assets/landini10.jpg', alt: 'Project afbeelding 3' }
+        { src: '../src/assets/pawpaths.png', alt: 'Project afbeelding 3' },
+        { src: '../src/assets/bol.png', alt: 'Project afbeelding 4' }
       ]"
-      linkTarget="/WPL1"
+      linkTarget="/EigenWerk"
     />
     </section>
   </div>
@@ -66,6 +67,7 @@ import foto1 from '../src/assets/ik.jpg';
 import foto2 from '../src/assets/masseyferg.jpg';
 import foto4 from '../src/assets/riaenik.jpg';
 import foto3  from '../src/assets/landini10.jpg';
+import bol from '../src/assets/bol.png';
 
 export default {
   name: "Projects",
@@ -80,6 +82,7 @@ export default {
       dashboard,
       pawpaths,
       ziapina,
+      bol,
       photos: [
         { src: foto1, alt: 'Foto 1 beschrijving' },
         { src: foto2, alt: 'Foto 2 beschrijving' },

@@ -17,6 +17,7 @@
         subtitle="Hey"
         text="Ik ben Lorena en ik ben 18 jaar en studeer aan de Hogeschool PXL om webdeveloper te worden en werk met HTML, CSS, JavaScript en Vue. Ik hou ervan om websites te maken en met een oog voor detail en structuur. Naast webontwikkeling verkoop ik hooi, wat me helpt om plannen en doorzetten te combineren. Mijn landbouwachtergrond zorgt voor een praktische aanpak die ik ook in mijn werk toepas."
         :photos="photos"
+        linkTarget="/About"
       />
     </main>
   </div>

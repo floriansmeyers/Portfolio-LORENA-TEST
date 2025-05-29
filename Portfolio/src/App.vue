@@ -4,6 +4,7 @@
   
 
   <Navigatie />
+  <BackButton/>
     <RouterView />
     <Footer /> 
     </body>
@@ -17,6 +18,8 @@ import Navigatie from '../components/Navigatie.vue';
 import Header from '../components/Header.vue';
 import Section from '../components/Section.vue';
 import Content from '../components/Content.vue';
+import Card from '../components/Card.vue';
+import BackButton from '../components/BackButton.vue';
 
 
 
@@ -28,11 +31,14 @@ export default {
     Header,
     Section,
     Content,
+    Card,
+    BackButton
   },
   data () {
     return{
       Header,
       Content,
+      Card,
 
   };
 },

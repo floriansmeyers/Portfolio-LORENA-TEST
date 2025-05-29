@@ -13,13 +13,23 @@
         <h2 v-if="subtitle" class="function-name">{{ subtitle }}</h2>
         <p v-if="description" class="function-description">{{ description }}</p>
         <div class="projects-button" v-if="description2">
-          <router-link to="/projecten" class="view-work-button">
+          <router-link  v-if="showLink" to="/Projects" class="view-work-button">
             <p class="function-description">{{ description2 }}</p>
             <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="5 12 19 12"></polyline>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </router-link>
+          <h3 v-if="subtitle2 && subtitleUrl2" class="subtitle2">
+            
+        <a :href="subtitleUrl2" target="_blank" rel="noopener noreferrer">{{ subtitle2 }}
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="5 12 19 12"></polyline>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        
+    </h3>
         </div>
       </div>
     </div>
@@ -40,6 +50,14 @@ export default {
     subtitle: String,
     description: String,
     description2: String,
+    subtitle2: {
+      type: String,
+      required: true,
+    },
+    subtitleUrl2: {
+      type: String,
+      required: true,
+    },
   },
   computed: {
     gridImages() {
@@ -57,8 +75,13 @@ export default {
     },
     hasContent() {
       return this.hasImages || this.hasText;
-    }
-  }
+    },
+    
+    showLink() {
+      
+      return this.$route.path !== '/About';
+    },
+  },
 };
 </script>
 
@@ -159,6 +182,27 @@ export default {
 }
 
 .view-work-button:hover {
+  background-color: #e2faf6;
+  border-color: #1d1d1d;
+}
+
+.subtitle2 a{
+  border: 1px solid #2b2d42;
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #2b2d42;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+.subtitle2 svg{
+  padding-left: 20px;
+}
+.subtitle2:hover a {
   background-color: #e2faf6;
   border-color: #1d1d1d;
 }

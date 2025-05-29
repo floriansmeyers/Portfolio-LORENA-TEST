@@ -1,22 +1,55 @@
 <template>
   <div class="home-page">
-    <Contentheader 
+    <Content 
       title="MIJN PROJECTEN"
-      subtitle="FRONT - END DEVELOPER"
+      subtitle="wpl 1, wpl 2, eigen werk"
       description="Tijdens WPL 1 en 2 heb ik praktische ervaring opgedaan met webontwikkeling. Ik werkte aan echte projecten waarbij ik mijn kennis van HTML, CSS, JavaScript en Vue toepaste. Deze projecten hielpen me mijn vaardigheden te verbeteren en het belang van teamwork en planning te leren."
-      mainImage="../src/assets/dashboard.png"
-      gridImage1="../src/assets/pawpaths.png"
+      mainImage="../src/assets/kubus.png"
+      gridImage1="../src/assets/schilderij.jpg  "
       gridImage2="../src/assets/ziapina2.png"
     /> 
 
-    <main class="container">
+    <section class="container">
       <Section
-        title="OVER MIJ"
-        subtitle="Hey"
-        text="Ik Lorena en ik ben 18 jaar en studeer aan de Hogeschool PXL om webdeveloper te worden en werk met HTML, CSS, JavaScript en Vue. Ik hou ervan om websites te maken en met een oog voor detail en structuur. Naast webontwikkeling verkoop ik hooi, wat me helpt om plannen en doorzetten te combineren. Mijn landbouwachtergrond zorgt voor een praktische aanpak die ik ook in mijn werk toepas."
-        :photos="photos"
-      />
-    </main>
+      title="WPL 1"
+      subtitle="16 sep 2024 - 22 dec 2024"
+      text="WPL 1 staat voor Werkplekleren 1 en is over het algemeen het eerste deel van een praktijkgericht onderwijstraject. Het is ontworpen om studenten een initiële kennismaking te geven met de beroepspraktijk van hun gekozen vakgebied. De nadruk ligt vaak op het ontwikkelen van een professionele houding, het verkennen van de werkplek, en het opdoen van eerste praktische vaardigheden onder begeleiding en een voorbereiding naar WPL 2 waar we met een groep van 8 personen aan een case gaan werken."
+      :photos="[
+        { src: '../src/assets/dashboard.png', alt: 'Project afbeelding 1' },
+        { src: '../src/assets/pop.png', alt: 'Project afbeelding 2' },
+        { src: '../src/assets/vacature.png', alt: 'Project afbeelding 3' },
+        { src: '../src/assets/eindreflectie.jpg', alt: 'Project afbeelding 4'  }
+      ]"
+      linkTarget="/WPL1"
+    />
+    </section>
+    <section class="container">
+     <Section
+      title="WPL 2"
+      subtitle="3 feb 2025 - 29 mei 2025"
+      text="Tijdens WPL 2 werkten we in team aan een project voor een externe opdrachtgever. Het team bestond uit studenten van digitale vormgeving en programmeren, waardoor we ontwerp en ontwikkeling konden combineren. We begonnen met wireframes en een prototype, en vertaalden dit naar een werkende front-end. Door deze samenwerking leerde ik hoe belangrijk goede communicatie en taakverdeling zijn bij het bouwen van een doordachte website."
+      :photos="[
+        { src: '../src/assets/portfolio2.png', alt: 'Project afbeelding 1' },
+        { src: '../src/assets/ziapina2.png', alt: 'Project afbeelding 2' },
+        { src: '../src/assets/ziapina3.png', alt: 'Project afbeelding 3' },
+        { src: '../src/assets/eindreflectie.jpg', alt: 'Project afbeelding 4'  }
+      ]"
+      linkTarget="/WPL2"
+    />
+    </section>
+    <section class="container">
+      <Section
+      title="Eigen werk"
+      subtitle="2024 - heden"
+      text="WPL 1 staat voor Werkplekleren 1 en is over het algemeen het eerste deel van een praktijkgericht onderwijstraject. Het is ontworpen om studenten een initiële kennismaking te geven met de beroepspraktijk van hun gekozen vakgebied. De nadruk ligt vaak op het ontwikkelen van een professionele houding, het verkennen van de werkplek, en het opdoen van eerste praktische vaardigheden onder begeleiding en een voorbereiding naar WPL 2 waar we met een groep van 8 personen aan een case gaan werken."
+      :photos="[
+        { src: '../src/assets/kubus.png', alt: 'Project afbeelding 1' },
+        { src: '../src/assets/schilderij.jpg', alt: 'Project afbeelding 2' },
+        { src: '../src/assets/landini10.jpg', alt: 'Project afbeelding 3' }
+      ]"
+      linkTarget="/WPL1"
+    />
+    </section>
   </div>
 </template>
 
@@ -24,7 +57,7 @@
 import Footer from '../components/Footer.vue';
 import Navigatie from '../components/Navigatie.vue';
 import Section from '../components/Section.vue';
-import Content from '../componets/Content.vue';
+import Content from '../components/Content.vue';
 
 import dashboard from '../src/assets/dashboard.png';
 import pawpaths from '../src/assets/pawpaths.png';

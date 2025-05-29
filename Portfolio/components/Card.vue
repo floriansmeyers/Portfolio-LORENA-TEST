@@ -1,44 +1,32 @@
 <template>
   <section class="section">
-    <div class="text-content">
+   <div class="photo-grid" v-if="photos && photos.length">
+  <img
+    :src="photos[0].src"
+    :alt="photos[0].alt || 'Foto 1'"
+  />
+</div>
+
+    <div class="text-content-right">
       <h2 class="header">{{ title }}</h2>
-      <h3 v-if="subtitle" class="subtitle">{{ subtitle }}</h3>
+      <h3 v-if="subtitle && subtitleUrl" class="subtitle">
+        <a :href="subtitleUrl" target="_blank" rel="noopener noreferrer">{{ subtitle }}</a>
+    </h3>
+    
       <p v-if="text" class="text">{{ text }}</p>
+      <h3 v-if="subtitle2 && subtitleUrl2" class="subtitle2">
+        <a :href="subtitleUrl2" target="_blank" rel="noopener noreferrer">{{ subtitle2 }}</a>
+    </h3>
+    
 
-      <div class="projects-button">
-        <router-link :to="linkTarget" class="view-work-button">
-          
-          <svg
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            stroke="currentColor"
-            stroke-width="2"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="5 12 19 12"></polyline>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </router-link>
-      </div>
-    </div>
-
-    <div class="photo-grid" v-if="photos && photos.length">
-      <img
-        v-for="(photo, index) in photos.slice(0, 4)"
-        :key="index"
-        :src="photo.src"
-        :alt="photo.alt || `Foto ${index + 1}`"
-      />
+      
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'Section',
+  name: 'Card',
   props: {
     title: {
       type: String,
@@ -57,50 +45,62 @@ export default {
       type: Array,
       default: () => [],
     },
-    
+    subtitleUrl: {
+       type: String,
+        default: '',
+    },
+    subtitleUrl2: {
+       type: String,
+        default: '',
+    },
+    subtitle2: {
+       type: String,
+        default: '',
+    },
     linkTarget: {
       type: String,
       required: true,
     },
   },
+
 };
 </script>
 
 <style scoped>
 .section {
   display: flex;
-  flex-direction: row; /* horizontaal */
+  flex-direction: row;
   border-radius: 8px;
   padding: 40px;
   margin-bottom: 40px;
   color: #555;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 1000px;
-  overflow: hidden;
   gap: 40px;
+  overflow: hidden;
 }
 
-.text-content {
-  flex: 1;
-}
-
-/* Foto-grid rechts */
 .photo-grid {
-  width: 600px; /* vaste breedte voor fotos */
+  width: 600px; 
   height: 600px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 150px);
-  gap: 1rem;
-  row-gap: 10.5rem;
-  border-radius: 8px;
+  display: flex;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
+
+  border-radius: 15px;
 }
 
 .photo-grid img {
   width: 100%;
-  height: 200%;
+  height: 100%;
   object-fit: cover;
   border-radius: 6px;
+}
+
+.text-content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header {
@@ -110,36 +110,43 @@ export default {
   letter-spacing: -1.5px;
   margin-bottom: 15px;
   color: #333;
+  text-align: start;
 }
 
-.subtitle {
+.subtitle  a{
   font-size: 1.5rem;
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 10px;
   color: #333;
+  text-align: start;
+  text-decoration: none;
+}
+.subtitle2  a{
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  
+  color: #333;
+  text-align: start;
+  text-decoration: none;
 }
 
 .text {
   font-size: 1rem;
   line-height: 1.6;
   max-width: 600px;
-  margin-bottom: 20px;
-}
-
-.list {
-  list-style-type: disc;
-  margin-left: 20px;
-  max-width: 600px;
+  margin-bottom: -20px;
   color: #555;
+  text-align: start;
+  margin-left: auto;
 }
 
-.list li {
-  margin-bottom: 10px;
-}
+
 
 .projects-button {
   margin-top: 10px;
+  text-align: start;
 }
 
 .view-work-button {
@@ -154,6 +161,7 @@ export default {
   color: #2b2d42;
   transition: all 0.3s ease;
   background-color: transparent;
+  justify-content: flex-end;
 }
 
 .view-work-button:hover {
@@ -161,28 +169,31 @@ export default {
   border-color: #1d1d1d;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .section {
     flex-direction: column;
     padding: 20px;
     max-width: 100%;
   }
-  .header {
-    font-size: 2rem;
-    text-align: center;
+  .photo-left {
+    width: 100%;
+    flex: none;
+    margin-bottom: 20px;
   }
-  .text-content,
-  .list {
-    max-width: 100%;
+  .header,
+  .subtitle,
+  .text,
+  .list,
+  .projects-button {
     text-align: center;
     margin-left: 0;
+    margin-right: 0;
   }
-  .photo-grid {
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 150px;
-    margin-top: 20px;
+  .list li {
+    direction: ltr;
+  }
+  .view-work-button {
+    justify-content: center;
   }
 }
 </style>

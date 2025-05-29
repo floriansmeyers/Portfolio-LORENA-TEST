@@ -3,8 +3,7 @@
     <div class="footer-content-wrapper">
       <p class="footer-text">&copy; {{ currentYear }} LORENA VANDEWIJNGAERDEN</p>
       <div class="footer-links">
-        <a href="#" class="footer-link">Privacybeleid</a>
-        <a href="#" class="footer-link">Contact</a>
+       <a href="/privacyrichtlijnen.pdf" target="_blank" rel="noopener noreferrer">Privacy policy</a>
       </div>
     </div>
   </footer>
@@ -63,14 +62,14 @@ export default {
   justify-content: center;
 }
 
-.footer-link {
+.footer-links a{
   text-decoration: none;
   color: #007b7f;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.footer-link:hover {
+.footer-links:hover a {
   color: #004f50;
 }
 

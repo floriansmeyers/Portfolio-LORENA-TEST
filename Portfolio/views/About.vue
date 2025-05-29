@@ -6,20 +6,58 @@
       description="Webdeveloper in wording, gebeten door front-end en design."
       description2="Bekijk mijn projecten"
       mainImage="../src/assets/pres.jpg"
-      gridImage1="../src/assets/ik.jpg"
-      gridImage2="../src/assets/landini10.jpg"
+      gridImage1="../src/assets/konijn.jpg"
+      gridImage2="../src/assets/snoepie2.jpg"
       subtitle2="Bekijk mijn cv"
       subtitleUrl2="/Vandewijngaerden_Lorena_cv.pdf"
     /> 
 
-    <main class="container">
+    <section class="container">
       <Section
-        title="OVER MIJ"
-        subtitle="Hey"
-        text="Ik ben Lorena en ik ben 18 jaar en studeer aan de Hogeschool PXL om webdeveloper te worden en werk met HTML, CSS, JavaScript en Vue. Ik hou ervan om websites te maken en met een oog voor detail en structuur. Naast webontwikkeling verkoop ik hooi, wat me helpt om plannen en doorzetten te combineren. Mijn landbouwachtergrond zorgt voor een praktische aanpak die ik ook in mijn werk toepas."
-        :photos="photos"
+        title="wie ben ik"
+        text="Hoi! Ik ben Lorena Vandewijngaerden, een creatief en praktisch ingesteld persoon met een grote liefde voor het buitenleven, dieren én digitale vormgeving. Je vindt me vaak op het veld met de tractor, of thuis met mijn konijnen en kat — die trouwens altijd in de buurt zijn als ik aan het werk ben. Ik studeer momenteel Digitale Vormgeving, met de ambitie om front-end developer te worden. In die richting kan ik mijn oog voor detail, gevoel voor structuur en creativiteit helemaal kwijt. Wat ik vooral leuk vind, is om digitale projecten vorm te geven die niet alleen mooi zijn, maar ook gebruiksvriendelijk en doordacht. Ik combineer mijn passie voor techniek en creativiteit met het dagelijkse leven op het platteland en mijn betrokkenheid bij ons familiebedrijf. Die combinatie maakt wie ik ben: nuchter, oplossingsgericht en met beide voeten op de grond."
+        :photos="[
+        { src: '../src/assets/me.jpg', alt: 'Project afbeelding 1' },
+        { src: '../src/assets/snoepie.jpg', alt: 'Project afbeelding 2' },
+        { src: '../src/assets/welger.jpg', alt: 'Project afbeelding 3' },
+        { src: '../src/assets/landini10.jpg', alt: 'Project afbeelding 4'  }
+      ]"
+        :showLink="false"
       />
-    </main>
+    </section>
+
+     <section class="container">
+      <Section
+        title="Mijn intresses"
+        listitem=" Landbouw & Buitenleven: 
+        Je bent graag op het veld, met de tractor, en voelt je thuis in de natuur."
+        listitem2=" Digitale Vormgeving:
+        Je studeert digitale vormgeving en wil front-end developer worden."
+        listitem3=" Dieren & Zorg:
+        Je zorgt met liefde voor je konijnen en kat — ze zijn echt deel van je leven."
+        listitem4=" Creativiteit & Projecten: 
+Je houdt ervan om ideeën visueel en inhoudelijk vorm te geven, in projecten zoals Zia Pina."
+        :photos="[
+          {src: '../src/assets/tractorIcon.svg', alt: 'tractoricoon'},
+          {src: '../src/assets/laptopIcon.svg', alt: 'laptopicoon'},
+          {src: '../src/assets/pawsIcon.svg', alt: 'potenicoon'},
+          {src: '../src/assets/creativeIcon.svg', alt: 'creativeicoon'}
+          ]"
+        description="wil je meer weten over mijn landbouw"
+        linkTarget="/Landbouw"
+      />
+    </section>
+
+     <section class="container">
+      <ContactCard
+    email="lorena.vdw@outlook.com"
+    :linkedinUrl="'https://www.linkedin.com/in/lorena-vandewijngaerden-405964340/'"
+    gsm="0470 396527"
+    :photos="[
+        { src: '../src/assets/ik.jpg', alt: 'Project afbeelding 1' }]"
+/>
+
+    </section>
   </div>
 </template>
 
@@ -28,6 +66,8 @@ import Footer from '../components/Footer.vue';
 import Navigatie from '../components/Navigatie.vue';
 import Header from '../components/Header.vue';
 import Section from '../components/Section.vue';
+import Card from '../components/Card.vue';
+import ContactCard from '../components/ContactCard.vue';
 
 import dashboard from '../src/assets/dashboard.png';
 import pawpaths from '../src/assets/pawpaths.png';
@@ -45,6 +85,8 @@ export default {
     Footer,
     Header,
     Section,
+    Card,
+    ContactCard,
   },
   data() {
     return {

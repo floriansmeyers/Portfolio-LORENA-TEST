@@ -32,6 +32,14 @@
       :photos="[{ src: eindreflectie, alt: 'foto4' }]"
       />
     </section>
+
+    <section class="container">
+      <Card
+      title="portfolio"
+      text="Op het einde van WPL 2 heb ik mijn nieuwe portfolio gemaakt. Dit is het resultaat!"
+      :photos="[{ src: portfolio, alt: 'foto4' }]"
+      />
+    </section>
   </div>
 </template>
 

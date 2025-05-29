@@ -103,10 +103,9 @@ export default {
   font-family: 'Montserrat', sans-serif;
   color: #2b2d42;
   background-color: #f5f8fb;
-  padding: 1rem;
+  padding:10px;
   border-radius: 15px;
-  overflow-x: hidden;
-  box-sizing: border-box;
+  overflow-x: hidden; 
 }
 
 .container {
@@ -116,9 +115,8 @@ export default {
   padding: 2rem;
   margin: 2rem auto;
   max-width: 1200px;
-  width: 100%;
-  box-sizing: border-box;
 }
+
 
 .section-title {
   font-size: 2rem;
@@ -130,47 +128,5 @@ export default {
   padding-bottom: 0.5rem;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  display: block;
-}
 
-@media (max-width: 1024px) {
-  .container {
-    padding: 1.5rem;
-    margin: 1.5rem auto;
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-page {
-    padding: 0.5rem;
-  }
-
-  .container {
-    padding: 1rem;
-    margin: 1rem auto;
-  }
-
-  .section-title {
-    font-size: 1.25rem;
-  }
-}
 </style>

@@ -44,7 +44,7 @@ Je houdt ervan om ideeën visueel en inhoudelijk vorm te geven, in projecten zoa
           {src: '../src/assets/creativeIcon.svg', alt: 'creativeicoon'}
           ]"
         description="wil je meer weten over mijn landbouw"
-        linkTarget="/Landbouw"
+        linkTarget="/landbouw"
       />
     </section>
 
@@ -112,7 +112,7 @@ export default {
   font-family: 'Montserrat', sans-serif;
   color: #2b2d42;
   background-color: #f5f8fb;
-  padding: 10px;
+  padding:10px;
   border-radius: 15px;
 }
 
@@ -135,63 +135,7 @@ export default {
   padding-bottom: 0.5rem;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 main {
   padding: 20px;
 }
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 1.5rem;
-    margin: 1.5rem auto;
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-    margin: 1rem auto;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .home-page {
-    padding: 5px;
-  }
-
-  main {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0.75rem;
-    margin: 1rem auto;
-  }
-
-  .section-title {
-    font-size: 1.25rem;
-  }
-
-  .home-page {
-    padding: 0;
-  }
-
-  main {
-    padding: 5px;
-  }
-}
-
 </style>

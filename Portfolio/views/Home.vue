@@ -5,9 +5,9 @@
       subtitle="FRONT - END DEVELOPER"
       description="Webdeveloper in wording, gebeten door front-end en design."
       description2="Bekijk mijn projecten"
-      mainImage="../src/assets/dashboard.png"
-      gridImage1="../src/assets/pawpaths.png"
-      gridImage2="../src/assets/ziapina2.png"
+     :mainImage="dashboard"
+      :gridImage1="pawpaths"
+      :gridImage2="ziapina2"
      
     /> 
 
@@ -31,7 +31,7 @@ import Section from '../components/Section.vue';
 
 import dashboard from '../src/assets/dashboard.png';
 import pawpaths from '../src/assets/pawpaths.png';
-import ziapina from '../src/assets/ziapina2.png';
+import ziapina2 from '../src/assets/ziapina2.png';
 import foto1 from '../src/assets/ik.jpg';
 import foto2 from '../src/assets/masseyferg.jpg';
 import foto4 from '../src/assets/riaenik.jpg';
@@ -49,7 +49,7 @@ export default {
     return {
       dashboard,
       pawpaths,
-      ziapina,
+      ziapina2,
       photos: [
         { src: foto1, alt: 'Foto 1 beschrijving' },
         { src: foto2, alt: 'Foto 2 beschrijving' },
@@ -69,9 +69,8 @@ export default {
   font-family: 'Montserrat', sans-serif;
   color: #2b2d42;
   background-color: #f5f8fb;
-  padding: 10px;
+  padding:10px;
   border-radius: 15px;
-  overflow-x: hidden;
 }
 
 .container {
@@ -96,60 +95,4 @@ export default {
 main {
   padding: 20px;
 }
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 1.5rem;
-    margin: 1.5rem auto;
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-    margin: 1rem auto;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  main {
-    padding: 10px;
-  }
-
-  .home-page {
-    padding: 5px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0.75rem;
-    margin: 1rem auto;
-  }
-
-  .section-title {
-    font-size: 1.25rem;
-  }
-
-  main {
-    padding: 5px;
-  }
-
-  .home-page {
-    padding: 0;
-  }
-}
-
 </style>

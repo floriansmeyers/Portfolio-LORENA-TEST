@@ -117,7 +117,6 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   width: 50%;
   height: 400px;
-  gap: 8px;
 }
 
 .hero-img-grid img {
@@ -187,7 +186,7 @@ export default {
   border-color: #1d1d1d;
 }
 
-.subtitle2 a {
+.subtitle2 a{
   border: 1px solid #2b2d42;
   padding: 10px 18px;
   border-radius: 8px;
@@ -200,23 +199,12 @@ export default {
   transition: all 0.3s ease;
   background-color: transparent;
 }
-.subtitle2 svg {
+.subtitle2 svg{
   padding-left: 20px;
 }
 .subtitle2:hover a {
   background-color: #e2faf6;
   border-color: #1d1d1d;
-}
-
-
-@media (max-width: 1200px) {
-  .hero-img-large,
-  .hero-img-grid {
-    height: 350px;
-  }
-  .portfolio-title {
-    font-size: 7rem;
-  }
 }
 
 @media (max-width: 992px) {
@@ -242,7 +230,6 @@ export default {
 
   .portfolio-title {
     font-size: 3rem;
-    margin-bottom: 20px;
   }
 
   .social-media-info {
@@ -250,22 +237,19 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+  .portfolio-title {
+    font-size: 2.2rem;
+  }
+
   .hero-img-grid {
     grid-template-columns: 1fr;
-    height: 600px; 
   }
 
-  .hero-img-grid img {
-    height: 50%;
-  }
-
-  .function-name {
-    font-size: 0.9rem;
-  }
-  .function-description {
-    font-size: 0.85
+  .view-work-button {
+    font-size: 0.7rem;
   }
 }
+
 
 </style>

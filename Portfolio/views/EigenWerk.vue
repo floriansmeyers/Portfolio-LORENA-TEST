@@ -128,6 +128,7 @@ export default {
   padding-bottom: 0.5rem;
 }
 
+/* Zorg dat alle afbeeldingen schaalbaar zijn */
 img {
   max-width: 100%;
   height: auto;

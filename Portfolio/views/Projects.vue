@@ -136,6 +136,7 @@ img {
   object-fit: cover;
 }
 
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 1024px) {
   .container {
     padding: 1.5rem;

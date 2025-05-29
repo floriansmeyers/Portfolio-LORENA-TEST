@@ -90,7 +90,7 @@ export default {
 </script>
 
 <style scoped>
-
+/* Maak containers flexibel en percentagebreedte */
 .container {
   background-color: #fff;
   border-radius: 20px;
@@ -98,11 +98,11 @@ export default {
   padding: 2rem;
   margin: 2rem auto;
   max-width: 1200px;
-  width: 90%;  
+  width: 90%;  /* Zorgt voor schaling op kleinere schermen */
   box-sizing: border-box;
 }
 
-
+/* Algemene afbeelding schaalbaarheid */
 img {
   max-width: 100%;
   height: auto;
@@ -110,7 +110,7 @@ img {
   border-radius: 15px;
 }
 
-
+/* Section titel iets kleiner op kleinere schermen */
 .section-title {
   font-size: 2rem;
   font-weight: 700;

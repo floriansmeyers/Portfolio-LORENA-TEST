@@ -5,9 +5,9 @@
       title="mijn passie voor landbouw"
       subtitle="lorena vandewijngaerden"
       description="Van kleins af aan ben ik al gefascineerd door het boerenleven. Tractoren, zaaien, oogsten – het zit in mijn hart. Hoewel ik me professioneel focus op webontwikkeling, blijft landbouw mijn grootste hobby. Op het veld kan ik mijn hoofd leegmaken en voel ik me echt thuis."
-      mainImage="../src/assets/bikken.jpg"
-      gridImage1="../src/assets/pres.jpg"
-      gridImage2="../src/assets/zaaien.jpg"
+      mainImage="../src/assets/pres.jpg"
+      gridImage1="../src/assets/konijn.jpg"
+      gridImage2="../src/assets/snoepie2.jpg"
     
     /> 
     
@@ -54,7 +54,7 @@ export default {
     return {
       landinienmassey,
         welger,
-        zaaien,
+        zaaien
     
     };
   }
@@ -66,11 +66,9 @@ export default {
   font-family: 'Montserrat', sans-serif;
   color: #2b2d42;
   background-color: #f5f8fb;
-  padding: 10px;
+  padding:10px;
   border-radius: 15px;
-  overflow-x: hidden;
 }
-
 .container {
   background-color: #fff;
   border-radius: 20px;
@@ -89,52 +87,4 @@ export default {
   border-bottom: 2px solid #2b2d42;
   padding-bottom: 0.5rem;
 }
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 1.5rem;
-    margin: 1.5rem auto;
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-    margin: 1rem auto;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .home-page {
-    padding: 5px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0.75rem;
-    margin: 1rem auto;
-  }
-
-  .section-title {
-    font-size: 1.25rem;
-  }
-
-  .home-page {
-    padding: 0;
-  }
-}
-
 </style>

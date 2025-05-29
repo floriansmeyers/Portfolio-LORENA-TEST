@@ -1,11 +1,11 @@
 <template>
   <section class="section">
- <div class="photo-grid" v-if="photos && photos.length">
-  <img
-    :src="photos[0].src"
-    :alt="photos[0].alt || 'Foto 1'"
-  />
-</div>
+    <div class="photo-grid" v-if="photos && photos.length">
+      <img
+        :src="photos[0].src"
+        :alt="photos[0].alt || 'Foto 1'"
+      />
+    </div>
 
     <div class="text-content-right">
       <h2 class="header">Contacteer mij</h2>
@@ -18,7 +18,7 @@
          <a :href="`mailto:${email}`">{{ email }}</a>
         </li>
         <li>
-        <a :href="linkedinUrl" target="_blank" rel="noopener noreferrer">Mijn LinkedIn</a>
+          <a :href="linkedinUrl" target="_blank" rel="noopener noreferrer">Mijn LinkedIn</a>
         </li>
         <li>
          <a :href="`tel:${gsm}`">{{ gsm }}</a>
@@ -40,12 +40,12 @@ export default {
       type: String,
       required: true,
     },
-     gsm: {
-    type: String,
-    required: false,
-    default: '',
-  },
-   photos: {
+    gsm: {
+      type: String,
+      required: false,
+      default: '',
+    },
+    photos: {
       type: Array,
       default: () => [],
     },
@@ -67,31 +67,14 @@ export default {
   overflow: hidden;
 }
 
-.icon-side {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-}
 
-.icon {
-  width: 80px;
-  height: 80px;
-}
-
-.text-content-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 .photo-grid {
-  width: 600px; 
+  width: 600px;
   height: 600px;
   display: flex;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
-
   border-radius: 15px;
+  flex-shrink: 0; 
 }
 
 .photo-grid img {
@@ -100,6 +83,14 @@ export default {
   object-fit: cover;
   border-radius: 6px;
 }
+
+.text-content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .header {
   font-size: 2.5rem;
   font-weight: 900;
@@ -108,6 +99,7 @@ export default {
   color: #333;
   text-align: start;
 }
+
 
 .text {
   font-size: 1rem;
@@ -131,23 +123,61 @@ export default {
   color: #2b2d42;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.contact-links a:hover {
+.contact-links a:hover,
+.contact-links a:focus {
   text-decoration: underline;
+  color: #1d1d1d;
 }
 
 @media (max-width: 992px) {
   .section {
     flex-direction: column;
     padding: 20px;
+    align-items: center;
+    max-width: 90vw;
   }
-  .icon-side {
+
+  .photo-grid {
     width: 100%;
-    margin-bottom: 20px;
+    height: 400px;
+    margin-bottom: 30px;
   }
+
   .text-content-right {
     text-align: center;
+  }
+
+  .header {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .photo-grid {
+    height: 250px;
+    border-radius: 12px;
+  }
+
+  .header {
+    font-size: 1.6rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+
+  .contact-links li {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .contact-links a {
+    font-size: 1.1rem;
+    padding: 6px 0;
+    display: inline-block;
   }
 }
 </style>

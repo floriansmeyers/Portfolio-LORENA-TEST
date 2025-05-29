@@ -3,7 +3,12 @@
     <div class="footer-content-wrapper">
       <p class="footer-text">&copy; {{ currentYear }} LORENA VANDEWIJNGAERDEN</p>
       <div class="footer-links">
-       <a href="/privacyrichtlijnen.pdf" target="_blank" rel="noopener noreferrer">Privacy policy</a>
+       <a 
+         href="/privacyrichtlijnen.pdf" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         aria-label="Privacy policy (openen in nieuw tabblad)"
+       >Privacy policy</a>
       </div>
     </div>
   </footer>
@@ -14,7 +19,7 @@ export default {
   name: "Footer",
   data() {
     return {
-      currentYear: new Date().getFullYear(), 
+      currentYear: new Date().getFullYear(),
     };
   },
 };
@@ -62,15 +67,17 @@ export default {
   justify-content: center;
 }
 
-.footer-links a{
+.footer-links a {
   text-decoration: none;
   color: #007b7f;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.footer-links:hover a {
+.footer-links a:hover,
+.footer-links a:focus {
   color: #004f50;
+  outline: none;
 }
 
 @media (max-width: 768px) {

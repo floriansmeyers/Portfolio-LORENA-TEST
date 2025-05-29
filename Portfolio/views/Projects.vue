@@ -96,13 +96,14 @@ export default {
 </script>
 
 <style scoped>
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 
 .home-page {
   font-family: 'Montserrat', sans-serif;
   color: #2b2d42;
   background-color: #f5f8fb;
-  padding:10px;
+  padding: 1rem;
   border-radius: 15px;
 }
 
@@ -113,6 +114,8 @@ export default {
   padding: 2rem;
   margin: 2rem auto;
   max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-title {
@@ -125,7 +128,43 @@ export default {
   padding-bottom: 0.5rem;
 }
 
-main {
-  padding: 20px;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .home-page {
+    padding: 0.5rem;
+  }
+}
+
 </style>

@@ -4,7 +4,7 @@
       
       title="wpl 2"
       subtitle="3 feb 2025 - 23 mei 2025"
-      description="WPL 2 was ons eerste groote project."
+      description="WPL 2 was ons eerste grote project."
       mainImage="../src/assets/ziapina.png"
       gridImage1="../src/assets/eindreflectie.jpg"
       gridImage2="../src/assets/ziapina3.png"
@@ -90,16 +90,6 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
-
-.home-page {
-  font-family: 'Montserrat', sans-serif;
-  color: #2b2d42;
-  background-color: #f5f8fb;
-  padding:10px;
-  border-radius: 15px;
-  overflow-x: hidden; 
-}
 
 .container {
   background-color: #fff;
@@ -108,6 +98,16 @@ export default {
   padding: 2rem;
   margin: 2rem auto;
   max-width: 1200px;
+  width: 90%;  
+  box-sizing: border-box;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
 }
 
 
@@ -121,5 +121,33 @@ export default {
   padding-bottom: 0.5rem;
 }
 
+
+@media (max-width: 900px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    width: 95%;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-page {
+    padding: 5px;
+  }
+
+  .container {
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 98%;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+}
 
 </style>

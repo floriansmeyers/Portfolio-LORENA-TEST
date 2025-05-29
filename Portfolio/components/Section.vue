@@ -86,7 +86,7 @@ export default {
     },
     showLink: {
     type: Boolean,
-    default: true, // standaard tonen
+    default: true, 
   },
   },
 };
@@ -95,7 +95,7 @@ export default {
 <style scoped>
 .section {
   display: flex;
-  flex-direction: row; /* horizontaal */
+  flex-direction: row; 
   border-radius: 8px;
   padding: 40px;
   margin-bottom: 40px;
@@ -104,21 +104,15 @@ export default {
   max-width: 1000px;
   overflow: hidden;
   gap: 40px;
+  box-sizing: border-box;
 }
 
 .text-content {
   flex: 1;
 }
-.function-description {
-  font-size: 0.9rem;
-  color: #5e5e5e;
-  margin-top: 12px;
-  line-height: 1.6;
 
-}
-/* Foto-grid rechts */
 .photo-grid {
-  width: 600px; /* vaste breedte voor fotos */
+  width: 600px; 
   height: 600px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -159,7 +153,6 @@ export default {
   margin-bottom: 20px;
 }
 
-
 .button {
   margin-top: 10px;
 }
@@ -184,7 +177,7 @@ export default {
   border-color: #1d1d1d;
 }
 
-/* Responsive */
+
 @media (max-width: 992px) {
   .section {
     flex-direction: column;
@@ -203,9 +196,42 @@ export default {
   }
   .photo-grid {
     width: 100%;
-    grid-template-columns: repeat(4, 1fr);
+    height: auto; 
+    grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: 150px;
     margin-top: 20px;
+    row-gap: 1rem; 
+  }
+  .photo-grid img {
+    height: 100%;
   }
 }
+
+
+@media (max-width: 600px) {
+  .section {
+    padding: 10px;
+    gap: 20px;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+  .text {
+    font-size: 0.9rem;
+  }
+  .projects-button {
+    font-size: 0.7rem;
+    padding: 8px 14px;
+  }
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto; 
+    height: auto;
+    gap: 10px;
+  }
+  .photo-grid img {
+    height: auto;
+  }
+}
+
 </style>

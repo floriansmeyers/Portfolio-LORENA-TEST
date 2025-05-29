@@ -63,8 +63,6 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
-
 .hero-section {
   font-family: 'Montserrat', sans-serif;
   display: flex;
@@ -82,18 +80,20 @@ export default {
   border-radius: 20px 20px 0 0;
 }
 
+
 .hero-img-large {
   width: 50%;
-  height: 400px;
+  min-height: 400px;
   object-fit: cover;
   flex-shrink: 0;
 }
+
 
 .hero-img-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 50%;
-  height: 400px;
+  min-height: 400px;
 }
 
 .hero-img-grid img {
@@ -110,7 +110,10 @@ export default {
   background-color: white;
   border-radius: 0 0 20px 20px;
   flex-wrap: wrap;
+  gap: 20px;
+  min-height: 150px;
 }
+
 
 .portfolio-title {
   font-size: 10rem;
@@ -119,11 +122,17 @@ export default {
   text-transform: uppercase;
   letter-spacing: -1px;
   color: #2b2d42;
+  flex: 1 1 60%; 
+  min-width: 280px; 
 }
+
 
 .social-media-info {
   max-width: 300px;
+  flex: 1 1 35%; 
+  min-width: 280px;
 }
+
 
 .function-name {
   font-size: 1rem;
@@ -133,16 +142,20 @@ export default {
   color: #2b2d42;
 }
 
+
 .function-description {
   font-size: 0.9rem;
   color: #5e5e5e;
   margin-bottom: 12px;
   line-height: 1.6;
-  width: 800px;
+  width: 100%;
 }
+
+
 .projects-button {
   margin-top: 10px;
 }
+
 
 .view-work-button {
   border: 1px solid #2b2d42;
@@ -156,6 +169,8 @@ export default {
   color: #2b2d42;
   transition: all 0.3s ease;
   background-color: transparent;
+  cursor: pointer;
+  gap: 8px; 
 }
 
 .view-work-button:hover {
@@ -175,21 +190,26 @@ export default {
   .hero-img-large,
   .hero-img-grid {
     width: 100%;
-    height: 300px;
+    min-height: 300px;
   }
 
   .hero-content {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
+    gap: 15px;
   }
 
   .portfolio-title {
     font-size: 3rem;
+    flex: none;
+    min-width: auto;
   }
 
   .social-media-info {
     max-width: 100%;
+    flex: none;
+    min-width: auto;
   }
 }
 
@@ -206,6 +226,7 @@ export default {
     font-size: 0.7rem;
   }
 }
+
 
 
 </style>

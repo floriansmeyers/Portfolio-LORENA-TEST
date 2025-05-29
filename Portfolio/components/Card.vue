@@ -1,25 +1,22 @@
 <template>
   <section class="section">
-   <div class="photo-grid" v-if="photos && photos.length">
-  <img
-    :src="photos[0].src"
-    :alt="photos[0].alt || 'Foto 1'"
-  />
-</div>
+    <div class="photo-grid" v-if="photos && photos.length">
+      <img
+        :src="photos[0].src"
+        :alt="photos[0].alt || 'Foto 1'"
+      />
+    </div>
 
     <div class="text-content-right">
       <h2 class="header">{{ title }}</h2>
       <h3 v-if="subtitle && subtitleUrl" class="subtitle">
         <a :href="subtitleUrl" target="_blank" rel="noopener noreferrer">{{ subtitle }}</a>
-    </h3>
-    
+      </h3>
+      
       <p v-if="text" class="text">{{ text }}</p>
       <h3 v-if="subtitle2 && subtitleUrl2" class="subtitle2">
         <a :href="subtitleUrl2" target="_blank" rel="noopener noreferrer">{{ subtitle2 }}</a>
-    </h3>
-    
-
-      
+      </h3>
     </div>
   </section>
 </template>
@@ -28,41 +25,15 @@
 export default {
   name: 'Card',
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    subtitle: {
-      type: String,
-      default: '',
-    },
-    text: {
-      type: String,
-      default: '',
-    },
-    
-    photos: {
-      type: Array,
-      default: () => [],
-    },
-    subtitleUrl: {
-       type: String,
-        default: '',
-    },
-    subtitleUrl2: {
-       type: String,
-        default: '',
-    },
-    subtitle2: {
-       type: String,
-        default: '',
-    },
-    linkTarget: {
-      type: String,
-      required: true,
-    },
+    title: { type: String, required: true },
+    subtitle: { type: String, default: '' },
+    text: { type: String, default: '' },
+    photos: { type: Array, default: () => [] },
+    subtitleUrl: { type: String, default: '' },
+    subtitleUrl2: { type: String, default: '' },
+    subtitle2: { type: String, default: '' },
+    linkTarget: { type: String, required: true },
   },
-
 };
 </script>
 
@@ -85,8 +56,8 @@ export default {
   height: 600px;
   display: flex;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
-
   border-radius: 15px;
+  flex-shrink: 0;
 }
 
 .photo-grid img {
@@ -113,7 +84,7 @@ export default {
   text-align: start;
 }
 
-.subtitle  a{
+.subtitle a {
   font-size: 1.5rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -121,15 +92,17 @@ export default {
   color: #333;
   text-align: start;
   text-decoration: none;
+  display: inline-block;
 }
-.subtitle2  a{
+
+.subtitle2 a {
   font-size: 1rem;
   font-weight: 900;
   text-transform: uppercase;
-  
   color: #333;
   text-align: start;
   text-decoration: none;
+  display: inline-block;
 }
 
 .text {
@@ -142,58 +115,46 @@ export default {
   margin-left: auto;
 }
 
-
-
-.projects-button {
-  margin-top: 10px;
-  text-align: start;
-}
-
-.view-work-button {
-  border: 1px solid #2b2d42;
-  padding: 10px 18px;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  font-weight: 600;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #2b2d42;
-  transition: all 0.3s ease;
-  background-color: transparent;
-  justify-content: flex-end;
-}
-
-.view-work-button:hover {
-  background-color: #e2faf6;
-  border-color: #1d1d1d;
-}
-
 @media (max-width: 992px) {
   .section {
     flex-direction: column;
     padding: 20px;
     max-width: 100%;
+    align-items: center;
   }
-  .photo-left {
+  .photo-grid {
     width: 100%;
-    flex: none;
-    margin-bottom: 20px;
+    height: 400px;
+    margin-bottom: 30px;
   }
   .header,
-  .subtitle,
-  .text,
-  .list,
-  .projects-button {
+  .subtitle a,
+  .subtitle2 a,
+  .text {
     text-align: center;
     margin-left: 0;
     margin-right: 0;
   }
-  .list li {
-    direction: ltr;
+}
+
+@media (max-width: 576px) {
+  .photo-grid {
+    height: 250px;
+    border-radius: 12px;
   }
-  .view-work-button {
-    justify-content: center;
+  .header {
+    font-size: 2rem;
+  }
+  .subtitle a {
+    font-size: 1.2rem;
+  }
+  .subtitle2 a {
+    font-size: 0.9rem;
+  }
+  .text {
+    font-size: 0.95rem;
+    max-width: 100%;
+    margin-bottom: 0;
   }
 }
 </style>

@@ -69,8 +69,9 @@ export default {
   font-family: 'Montserrat', sans-serif;
   color: #2b2d42;
   background-color: #f5f8fb;
-  padding:10px;
+  padding: 10px;
   border-radius: 15px;
+  overflow-x: hidden;
 }
 
 .container {
@@ -95,4 +96,60 @@ export default {
 main {
   padding: 20px;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .home-page {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+    margin: 1rem auto;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  main {
+    padding: 5px;
+  }
+
+  .home-page {
+    padding: 0;
+  }
+}
+
 </style>

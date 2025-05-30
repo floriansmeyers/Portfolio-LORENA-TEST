@@ -5,17 +5,16 @@
       subtitle="FRONT - END DEVELOPER"
       description="Webdeveloper in wording, gebeten door front-end en design."
       description2="Bekijk mijn projecten"
-     :mainImage="dashboard"
-      :gridImage1="pawpaths"
-      :gridImage2="ziapina2"
-     
-    /> 
+      mainImage="/assets/dashboard.png"
+      gridImage1="/assets/pawpaths.png"
+      gridImage2="/assets/ziapina2.png"
+    />
 
     <main class="container">
       <Section
         title="OVER MIJ"
         subtitle="Hey"
-        text="Ik ben Lorena en ik ben 18 jaar en studeer aan de Hogeschool PXL om webdeveloper te worden en werk met HTML, CSS, JavaScript en Vue. Ik hou ervan om websites te maken en met een oog voor detail en structuur. Naast webontwikkeling verkoop ik hooi, wat me helpt om plannen en doorzetten te combineren. Mijn landbouwachtergrond zorgt voor een praktische aanpak die ik ook in mijn werk toepas."
+        text="Ik ben Lorena en ik ben 18 jaar en studeer aan de Hogeschool PXL om webdeveloper te worden en werk met HTML, CSS, JavaScript en Vue. Ik hou ervan om websites te maken met oog voor detail en structuur. Naast webontwikkeling verkoop ik hooi, wat me helpt om plannen en doorzetten te combineren. Mijn landbouwachtergrond zorgt voor een praktische aanpak die ik ook in mijn werk toepas."
         :photos="photos"
         linkTarget="/About"
       />
@@ -29,14 +28,6 @@ import Navigatie from '../components/Navigatie.vue';
 import Header from '../components/Header.vue';
 import Section from '../components/Section.vue';
 
-import dashboard from '../src/assets/dashboard.png';
-import pawpaths from '../src/assets/pawpaths.png';
-import ziapina2 from '../src/assets/ziapina2.png';
-import foto1 from '../src/assets/ik.jpg';
-import foto2 from '../src/assets/masseyferg.jpg';
-import foto4 from '../src/assets/riaenik.jpg';
-import foto3  from '../src/assets/landini10.jpg';
-
 export default {
   name: "Home",
   components: {
@@ -47,19 +38,15 @@ export default {
   },
   data() {
     return {
-      dashboard,
-      pawpaths,
-      ziapina2,
       photos: [
-        { src: foto1, alt: 'Foto 1 beschrijving' },
-        { src: foto2, alt: 'Foto 2 beschrijving' },
-        { src: foto3, alt: 'Foto 3 beschrijving' },
-        { src: foto4, alt: 'Foto 4 beschrijving' },
+        { src: '/assets/ik.jpg', alt: 'Foto 1 beschrijving' },
+        { src: '/assets/masseyferg.jpg', alt: 'Foto 2 beschrijving' },
+        { src: '/assets/landini10.jpg', alt: 'Foto 3 beschrijving' },
+        { src: '/assets/riaenik.jpg', alt: 'Foto 4 beschrijving' },
       ],
     };
   },
 };
-
 </script>
 
 <style scoped>
@@ -69,8 +56,9 @@ export default {
   font-family: 'Montserrat', sans-serif;
   color: #2b2d42;
   background-color: #f5f8fb;
-  padding:10px;
+  padding: 10px;
   border-radius: 15px;
+  overflow-x: hidden;
 }
 
 .container {
@@ -94,5 +82,47 @@ export default {
 
 main {
   padding: 20px;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .home-page {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+    margin: 1rem auto;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .home-page {
+    padding: 0;
+  }
 }
 </style>

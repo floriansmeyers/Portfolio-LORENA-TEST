@@ -4,52 +4,54 @@
       title="MIJN PROJECTEN"
       subtitle="wpl 1, wpl 2, eigen werk"
       description="Tijdens WPL 1 en 2 heb ik praktische ervaring opgedaan met webontwikkeling. Ik werkte aan echte projecten waarbij ik mijn kennis van HTML, CSS, JavaScript en Vue toepaste. Deze projecten hielpen me mijn vaardigheden te verbeteren en het belang van teamwork en planning te leren."
-      mainImage="../src/assets/kubus.png"
-      gridImage1="../src/assets/schilderij.jpg  "
-      gridImage2="../src/assets/ziapina2.png"
+      mainImage="/assets/kubus.png"
+      gridImage1="/assets/schilderij.jpg"
+      gridImage2="/assets/ziapina2.png"
     /> 
 
     <section class="container">
       <Section
-      title="WPL 1"
-      subtitle="16 sep 2024 - 22 dec 2024"
-      text="WPL 1 staat voor Werkplekleren 1 en is over het algemeen het eerste deel van een praktijkgericht onderwijstraject. Het is ontworpen om studenten een initiële kennismaking te geven met de beroepspraktijk van hun gekozen vakgebied. De nadruk ligt vaak op het ontwikkelen van een professionele houding, het verkennen van de werkplek, en het opdoen van eerste praktische vaardigheden onder begeleiding en een voorbereiding naar WPL 2 waar we met een groep van 8 personen aan een case gaan werken."
-      :photos="[
-        { src: '../src/assets/dashboard.png', alt: 'Project afbeelding 1' },
-        { src: '../src/assets/pop.png', alt: 'Project afbeelding 2' },
-        { src: '../src/assets/vacature.png', alt: 'Project afbeelding 3' },
-        { src: '../src/assets/eindreflectie.jpg', alt: 'Project afbeelding 4'  }
-      ]"
-      linkTarget="/WPL1"
-    />
+        title="WPL 1"
+        subtitle="16 sep 2024 - 22 dec 2024"
+        text="WPL 1 staat voor Werkplekleren 1 en is over het algemeen het eerste deel van een praktijkgericht onderwijstraject. Het is ontworpen om studenten een initiële kennismaking te geven met de beroepspraktijk van hun gekozen vakgebied. De nadruk ligt vaak op het ontwikkelen van een professionele houding, het verkennen van de werkplek, en het opdoen van eerste praktische vaardigheden onder begeleiding en een voorbereiding naar WPL 2 waar we met een groep van 8 personen aan een case gaan werken."
+        :photos="[
+          { src: '/assets/dashboard.png', alt: 'Project afbeelding 1' },
+          { src: '/assets/pop.png', alt: 'Project afbeelding 2' },
+          { src: '/assets/vacature.png', alt: 'Project afbeelding 3' },
+          { src: '/assets/eindreflectie.jpg', alt: 'Project afbeelding 4' }
+        ]"
+        linkTarget="/WPL1"
+      />
     </section>
-    <section class="container">
-     <Section
-      title="WPL 2"
-      subtitle="3 feb 2025 - 29 mei 2025"
-      text="Tijdens WPL 2 werkten we in team aan een project voor een externe opdrachtgever. Het team bestond uit studenten van digitale vormgeving en programmeren, waardoor we ontwerp en ontwikkeling konden combineren. We begonnen met wireframes en een prototype, en vertaalden dit naar een werkende front-end. Door deze samenwerking leerde ik hoe belangrijk goede communicatie en taakverdeling zijn bij het bouwen van een doordachte website."
-      :photos="[
-        { src: '../src/assets/portfolio2.png', alt: 'Project afbeelding 1' },
-        { src: '../src/assets/ziapina2.png', alt: 'Project afbeelding 2' },
-        { src: '../src/assets/ziapina3.png', alt: 'Project afbeelding 3' },
-        { src: '../src/assets/eindreflectie.jpg', alt: 'Project afbeelding 4'  }
-      ]"
-      linkTarget="/WPL2"
-    />
-    </section>
+
     <section class="container">
       <Section
-      title="Eigen werk"
-      subtitle="2024 - heden"
-      text="WPL 1 staat voor Werkplekleren 1 en is over het algemeen het eerste deel van een praktijkgericht onderwijstraject. Het is ontworpen om studenten een initiële kennismaking te geven met de beroepspraktijk van hun gekozen vakgebied. De nadruk ligt vaak op het ontwikkelen van een professionele houding, het verkennen van de werkplek, en het opdoen van eerste praktische vaardigheden onder begeleiding en een voorbereiding naar WPL 2 waar we met een groep van 8 personen aan een case gaan werken."
-      :photos="[
-        { src: '../src/assets/kubus.png', alt: 'Project afbeelding 1' },
-        { src: '../src/assets/schilderij.jpg', alt: 'Project afbeelding 2' },
-        { src: '../src/assets/pawpaths.png', alt: 'Project afbeelding 3' },
-        { src: '../src/assets/bol.png', alt: 'Project afbeelding 4' }
-      ]"
-      linkTarget="/EigenWerk"
-    />
+        title="WPL 2"
+        subtitle="3 feb 2025 - 29 mei 2025"
+        text="Tijdens WPL 2 werkten we in team aan een project voor een externe opdrachtgever. Het team bestond uit studenten van digitale vormgeving en programmeren, waardoor we ontwerp en ontwikkeling konden combineren. We begonnen met wireframes en een prototype, en vertaalden dit naar een werkende front-end. Door deze samenwerking leerde ik hoe belangrijk goede communicatie en taakverdeling zijn bij het bouwen van een doordachte website."
+        :photos="[
+          { src: '/assets/portfolio2.png', alt: 'Project afbeelding 1' },
+          { src: '/assets/ziapina2.png', alt: 'Project afbeelding 2' },
+          { src: '/assets/ziapina3.png', alt: 'Project afbeelding 3' },
+          { src: '/assets/eindreflectie.jpg', alt: 'Project afbeelding 4' }
+        ]"
+        linkTarget="/WPL2"
+      />
+    </section>
+
+    <section class="container">
+      <Section
+        title="Eigen werk"
+        subtitle="2024 - heden"
+        text="WPL 1 staat voor Werkplekleren 1 en is over het algemeen het eerste deel van een praktijkgericht onderwijstraject. Het is ontworpen om studenten een initiële kennismaking te geven met de beroepspraktijk van hun gekozen vakgebied. De nadruk ligt vaak op het ontwikkelen van een professionele houding, het verkennen van de werkplek, en het opdoen van eerste praktische vaardigheden onder begeleiding en een voorbereiding naar WPL 2 waar we met een groep van 8 personen aan een case gaan werken."
+        :photos="[
+          { src: '/assets/kubus.png', alt: 'Project afbeelding 1' },
+          { src: '/assets/schilderij.jpg', alt: 'Project afbeelding 2' },
+          { src: '/assets/pawpaths.png', alt: 'Project afbeelding 3' },
+          { src: '/assets/bol.png', alt: 'Project afbeelding 4' }
+        ]"
+        linkTarget="/EigenWerk"
+      />
     </section>
   </div>
 </template>
@@ -60,15 +62,6 @@ import Navigatie from '../components/Navigatie.vue';
 import Section from '../components/Section.vue';
 import Content from '../components/Content.vue';
 
-import dashboard from '../src/assets/dashboard.png';
-import pawpaths from '../src/assets/pawpaths.png';
-import ziapina from '../src/assets/ziapina2.png';
-import foto1 from '../src/assets/ik.jpg';
-import foto2 from '../src/assets/masseyferg.jpg';
-import foto4 from '../src/assets/riaenik.jpg';
-import foto3  from '../src/assets/landini10.jpg';
-import bol from '../src/assets/bol.png';
-
 export default {
   name: "Projects",
   components: {
@@ -76,27 +69,11 @@ export default {
     Footer,
     Section,
     Content
-  },
-  data() {
-    return {
-      dashboard,
-      pawpaths,
-      ziapina,
-      bol,
-      photos: [
-        { src: foto1, alt: 'Foto 1 beschrijving' },
-        { src: foto2, alt: 'Foto 2 beschrijving' },
-        { src: foto3, alt: 'Foto 3 beschrijving' },
-        { src: foto4, alt: 'Foto 4 beschrijving' },
-      ],
-    };
-  },
+  }
 };
-
 </script>
 
 <style scoped>
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 
 .home-page {
@@ -167,5 +144,4 @@ img {
     padding: 0.5rem;
   }
 }
-
 </style>

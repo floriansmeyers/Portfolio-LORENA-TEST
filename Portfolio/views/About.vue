@@ -5,9 +5,9 @@
       subtitle="lorena vandewijngaerden"
       description="Webdeveloper in wording, gebeten door front-end en design."
       description2="Bekijk mijn projecten"
-      mainImage="../src/assets/pres.jpg"
-      gridImage1="../src/assets/konijn.jpg"
-      gridImage2="../src/assets/snoepie2.jpg"
+      mainImage="/assets/pres.jpg"
+      gridImage1="/assets/konijn.jpg"
+      gridImage2="/assets/snoepie2.jpg"
       subtitle2="Bekijk mijn cv"
       subtitleUrl2="/Vandewijngaerden_Lorena_cv.pdf"
     /> 
@@ -17,46 +17,42 @@
         title="wie ben ik"
         text="Hoi! Ik ben Lorena Vandewijngaerden, een creatief en praktisch ingesteld persoon met een grote liefde voor het buitenleven, dieren én digitale vormgeving. Je vindt me vaak op het veld met de tractor, of thuis met mijn konijnen en kat — die trouwens altijd in de buurt zijn als ik aan het werk ben. Ik studeer momenteel Digitale Vormgeving, met de ambitie om front-end developer te worden. In die richting kan ik mijn oog voor detail, gevoel voor structuur en creativiteit helemaal kwijt. Wat ik vooral leuk vind, is om digitale projecten vorm te geven die niet alleen mooi zijn, maar ook gebruiksvriendelijk en doordacht. Ik combineer mijn passie voor techniek en creativiteit met het dagelijkse leven op het platteland en mijn betrokkenheid bij ons familiebedrijf. Die combinatie maakt wie ik ben: nuchter, oplossingsgericht en met beide voeten op de grond."
         :photos="[
-        { src: '../src/assets/me.jpg', alt: 'Project afbeelding 1' },
-        { src: '../src/assets/snoepie.jpg', alt: 'Project afbeelding 2' },
-        { src: '../src/assets/welger.jpg', alt: 'Project afbeelding 3' },
-        { src: '../src/assets/landini10.jpg', alt: 'Project afbeelding 4'  }
-      ]"
+          { src: '/assets/me.jpg', alt: 'Project afbeelding 1' },
+          { src: '/assets/snoepie.jpg', alt: 'Project afbeelding 2' },
+          { src: '/assets/welger.jpg', alt: 'Project afbeelding 3' },
+          { src: '/assets/landini10.jpg', alt: 'Project afbeelding 4' }
+        ]"
         :showLink="false"
       />
     </section>
 
-     <section class="container">
+    <section class="container">
       <Section
         title="Mijn intresses"
-        listitem=" Landbouw & Buitenleven: 
-        Je bent graag op het veld, met de tractor, en voelt je thuis in de natuur."
-        listitem2=" Digitale Vormgeving:
-        Je studeert digitale vormgeving en wil front-end developer worden."
-        listitem3=" Dieren & Zorg:
-        Je zorgt met liefde voor je konijnen en kat — ze zijn echt deel van je leven."
-        listitem4=" Creativiteit & Projecten: 
-Je houdt ervan om ideeën visueel en inhoudelijk vorm te geven, in projecten zoals Zia Pina."
+        listitem=" Landbouw & Buitenleven: Je bent graag op het veld, met de tractor, en voelt je thuis in de natuur."
+        listitem2=" Digitale Vormgeving: Je studeert digitale vormgeving en wil front-end developer worden."
+        listitem3=" Dieren & Zorg: Je zorgt met liefde voor je konijnen en kat — ze zijn echt deel van je leven."
+        listitem4=" Creativiteit & Projecten: Je houdt ervan om ideeën visueel en inhoudelijk vorm te geven, in projecten zoals Zia Pina."
         :photos="[
-          {src: '../src/assets/tractorIcon.svg', alt: 'tractoricoon'},
-          {src: '../src/assets/laptopIcon.svg', alt: 'laptopicoon'},
-          {src: '../src/assets/pawsIcon.svg', alt: 'potenicoon'},
-          {src: '../src/assets/creativeIcon.svg', alt: 'creativeicoon'}
-          ]"
+          { src: '/assets/tractorIcon.svg', alt: 'tractoricoon' },
+          { src: '/assets/laptopIcon.svg', alt: 'laptopicoon' },
+          { src: '/assets/pawsIcon.svg', alt: 'potenicoon' },
+          { src: '/assets/creativeIcon.svg', alt: 'creativeicoon' }
+        ]"
         description="wil je meer weten over mijn landbouw"
         linkTarget="/landbouw"
       />
     </section>
 
-     <section class="container">
+    <section class="container">
       <ContactCard
-    email="lorena.vdw@outlook.com"
-    :linkedinUrl="'https://www.linkedin.com/in/lorena-vandewijngaerden-405964340/'"
-    gsm="0470 396527"
-    :photos="[
-        { src: '../src/assets/ik.jpg', alt: 'Project afbeelding 1' }]"
-/>
-
+        email="lorena.vdw@outlook.com"
+        :linkedinUrl="'https://www.linkedin.com/in/lorena-vandewijngaerden-405964340/'"
+        gsm="0470 396527"
+        :photos="[
+          { src: '/assets/ik.jpg', alt: 'Project afbeelding 1' }
+        ]"
+      />
     </section>
   </div>
 </template>
@@ -69,15 +65,6 @@ import Section from '../components/Section.vue';
 import Card from '../components/Card.vue';
 import ContactCard from '../components/ContactCard.vue';
 
-import dashboard from '../src/assets/dashboard.png';
-import pawpaths from '../src/assets/pawpaths.png';
-import ziapina from '../src/assets/ziapina2.png';
-import foto1 from '../src/assets/ik.jpg';
-import foto2 from '../src/assets/landini10.jpg';
-import foto4 from '../src/assets/riaenik.jpg';
-import foto3  from '../src/assets/pres.jpg';
-
-
 export default {
   name: "Home",
   components: {
@@ -88,21 +75,7 @@ export default {
     Card,
     ContactCard,
   },
-  data() {
-    return {
-      dashboard,
-      pawpaths,
-      ziapina,
-      photos: [
-        { src: foto1, alt: 'Foto 1 beschrijving' },
-        { src: foto2, alt: 'Foto 2 beschrijving' },
-        { src: foto3, alt: 'Foto 3 beschrijving' },
-        { src: foto4, alt: 'Foto 4 beschrijving' },
-      ],
-    };
-  },
 };
-
 </script>
 
 <style scoped>
@@ -112,7 +85,7 @@ export default {
   font-family: 'Montserrat', sans-serif;
   color: #2b2d42;
   background-color: #f5f8fb;
-  padding:10px;
+  padding: 10px;
   border-radius: 15px;
 }
 

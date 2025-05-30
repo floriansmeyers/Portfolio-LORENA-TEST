@@ -29,15 +29,11 @@
     <section class="container">
       <Section
         title="Mijn intresses"
-        listitem=" Landbouw & Buitenleven: Je bent graag op het veld, met de tractor, en voelt je thuis in de natuur."
-        listitem2=" Digitale Vormgeving: Je studeert digitale vormgeving en wil front-end developer worden."
-        listitem3=" Dieren & Zorg: Je zorgt met liefde voor je konijnen en kat — ze zijn echt deel van je leven."
-        listitem4=" Creativiteit & Projecten: Je houdt ervan om ideeën visueel en inhoudelijk vorm te geven, in projecten zoals Zia Pina."
-        :photos="[
+        :listitems="['Landbouw & Buitenleven: Je bent graag op het veld, met de tractor, en voelt je thuis in de natuur.', 'Digitale Vormgeving: Je studeert digitale vormgeving en wil front-end developer worden.', 'Dieren & Zorg: Je zorgt met liefde voor je konijnen en kat — ze zijn echt deel van je leven.', ' Creativiteit & Projecten: Je houdt ervan om ideeën visueel en inhoudelijk vorm te geven, in projecten zoals Zia Pina.']"        :photos="[
           { src: '/assets/tractorIcon.svg', alt: 'tractoricoon' },
           { src: '/assets/laptopIcon.svg', alt: 'laptopicoon' },
           { src: '/assets/pawsIcon.svg', alt: 'potenicoon' },
-          { src: '/assets/creativeIcon.svg', alt: 'creativeicoon' }
+          { src: '/assets/CreativeIcon.svg', alt: 'creativeicoon' }
         ]"
         description="wil je meer weten over mijn landbouw"
         linkTarget="/landbouw"

@@ -1,19 +1,23 @@
+<!-- Section.vue -->
 <template>
   <section class="section">
     <div class="text-content">
       <h2 class="header">{{ title }}</h2>
       <h3 v-if="subtitle" class="subtitle">{{ subtitle }}</h3>
       <p v-if="text" class="text">{{ text }}</p>
-      <ul class="list">
-        
-        <li v-if="listitem" class="list-item">{{ listitem }}</li>
-        <li v-if="listitem2" class="list-item">{{ listitem2 }}</li>
-        <li v-if="listitem3" class="list-item">{{ listitem3 }}</li>
-        <li v-if="listitem3" class="list-item">{{ listitem4 }}</li>
+
+      <ul v-if="listitems && listitems.length" class="list">
+        <li v-for="(item, index) in listitems" :key="index" class="list-item">
+          {{ item }}
+        </li>
       </ul>
 
       <div class="button">
-        <router-link :to="linkTarget" v-if="showLink && linkTarget" class="projects-button">
+        <router-link
+          :to="linkTarget"
+          v-if="showLink && linkTarget"
+          class="projects-button"
+        >
           <p class="function-description">{{ description }}</p>
           <svg
             viewBox="0 0 24 24"
@@ -47,50 +51,19 @@
 export default {
   name: 'Section',
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    subtitle: {
-      type: String,
-      default: '',
-    },
-    text: {
-      type: String,
-      default: '',
-    },
-    description: {
-      type: String,
-    },
-   
-    listitem: {
-      type:Array,
-    },
-     listitem2: {
-      type:Array,
-    },
-     listitem3: {
-      type:Array,
-    },
-     listitem4: {
-      type:Array,
-    },
-    photos: {
-      type: Array,
-      default: () => [],
-    },
-    
-    linkTarget: {
-      type: String,
-      required: true,
-    },
-    showLink: {
-    type: Boolean,
-    default: true, 
-  },
+    title: { type: String, required: true },
+    subtitle: { type: String, default: '' },
+    text: { type: String, default: '' },
+    description: { type: String, default: '' },
+    listitems: { type: Array, default: () => [] },
+    photos: { type: Array, default: () => [] },
+    linkTarget: { type: String, required: false, default: ' '},
+    showLink: { type: Boolean, default: true },
   },
 };
 </script>
+
+
 
 <style scoped>
 .section {
